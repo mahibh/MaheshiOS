@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RewiseTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-35-usc">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pzC-6a-1wR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wch-vu-TLq"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JN2-VR-crc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="k9o-v1-2mp"/>
+                                </connections>
+                            </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-SQ-LdZ">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                                <color key="color" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZS2-35-usc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="17o-Gy-gso"/>
+                            <constraint firstItem="JN2-VR-crc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5SA-RH-jdH"/>
+                            <constraint firstItem="JN2-VR-crc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ABC-DB-Wq6"/>
+                            <constraint firstItem="JN2-VR-crc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BXD-Hc-3jS"/>
+                            <constraint firstItem="ZS2-35-usc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fyz-9T-U35"/>
+                            <constraint firstItem="SbA-SQ-LdZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lvh-eq-n4K"/>
+                            <constraint firstItem="ZS2-35-usc" firstAttribute="top" secondItem="JN2-VR-crc" secondAttribute="bottom" id="rda-Ud-hTo"/>
+                            <constraint firstItem="SbA-SQ-LdZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uMw-Db-Twr"/>
+                            <constraint firstItem="ZS2-35-usc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yK5-xC-SGo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="citiesTableView" destination="ZS2-35-usc" id="VtB-DG-fnk"/>
+                        <outlet property="indicator" destination="SbA-SQ-LdZ" id="nlL-87-knA"/>
+                        <outlet property="searchBar" destination="JN2-VR-crc" id="wFk-Hr-UY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
